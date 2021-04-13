@@ -29,6 +29,7 @@ public class Card {
     private Logs logs = new Logs();
 
     protected Card() {
+        this.createDateTime = LocalDateTime.now();
     }
 
     public Card(String title, String contents, Status status) {
