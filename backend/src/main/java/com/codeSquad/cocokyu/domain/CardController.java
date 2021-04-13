@@ -30,7 +30,7 @@ public class CardController {
     }
 
     @PostMapping("/todos")
-    public String create(@Valid Card card) {
+    public String create(@RequestBody @Valid Card card) {
         cardService.write(card);
         //TODO : Response 객체 생성
         return "success";
