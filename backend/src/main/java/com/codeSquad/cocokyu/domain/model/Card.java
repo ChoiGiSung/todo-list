@@ -30,6 +30,7 @@ public class Card {
     private Logs logs = new Logs();
 
     protected Card() {
+        this.createDateTime = LocalDateTime.now();
     }
 
     public Card(CardDto cardDto) {
