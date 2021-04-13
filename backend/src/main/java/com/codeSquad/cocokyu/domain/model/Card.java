@@ -1,6 +1,7 @@
 package com.codeSquad.cocokyu.domain.model;
 
 import com.codeSquad.cocokyu.domain.annotation.ToDoStatusPattern;
+import com.codeSquad.cocokyu.domain.dto.CardDto;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Embedded;
 
@@ -31,19 +32,19 @@ public class Card {
     protected Card() {
     }
 
-    public Card(String title, String contents, Status status) {
-        this.title = title;
-        this.contents = contents;
-        this.status = status;
+    public Card(CardDto cardDto) {
+        this.title = cardDto.getTitle();
+        this.contents = cardDto.getContents();
+        this.status = cardDto.getStatus();
         this.createDateTime = LocalDateTime.now();
         logs.createLog(this);
     }
 
-    public void modify(Card updateCard) {
-        logs.updateLog(this, updateCard);
-        this.title = updateCard.title;
-        this.contents = updateCard.contents;
-        this.status = updateCard.status;
+    public void modify(CardDto updateCardDto) {
+        logs.updateLog(this, updateCardDto);
+        this.title = updateCardDto.getTitle();
+        this.contents = updateCardDto.getContents();
+        this.status = updateCardDto.getStatus();
     }
 
     public void delete() {
