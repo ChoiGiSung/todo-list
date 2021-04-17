@@ -1,0 +1,20 @@
+create table card (id int primary key auto_increment, title varchar(255) not null, contents varchar(255) not null, status varchar(64), create_date_time timestamp);
+
+create table log( id int primary key auto_increment,
+title varchar(255), from_status varchar(64),
+to_status varchar(64),action varchar(64),
+create_date_time timestamp,
+card_id int);
+
+
+create table log( id int primary key auto_increment,
+title varchar(255), from_status varchar(64),
+to_status varchar(64),action varchar(64),
+create_date_time timestamp,
+card_id int,
+constraint card_forign foreign key (card_id) references card (id));
+
+
+
+alter table log add constraint card_forign foreign key (card_id) references card (id);
+alter table card add column priority DOUBLE(3,55);
