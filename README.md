@@ -1,10 +1,6 @@
 # todo-list
 그룹프로젝트 #1
 
-<<<<<<< HEAD
-url 
-https://documenter.getpostman.com/view/15264844/TzCS6RsE
-=======
 ## 스쿼드 소개
 1. Kyu - Backend
 3. Coco - Backend 
@@ -64,6 +60,3 @@ https://documenter.getpostman.com/view/15264844/TzCS6RsE
 - 상의해야할 것부터 구현해야하는 모든 이슈 생성
 - 마일스톤 활용
 
-
-
->>>>>>> 98099f9393a1d93b41ae792d767de2db852f898f
